@@ -1,0 +1,16 @@
+---
+pagination:
+  data: galleries.gallery
+  size: 1
+  alias: gallery
+permalink: "/gallery/{{ gallery.title | slugify }}/index.html"
+layout: gallery
+---
+<div>
+  {% set subtitle = gallery.title %}
+  {% set currentSculptureList = collections.galleryTreasures %}
+  {% include "src/_includes/partials/subtitle.html" %}
+  {% include "src/_includes/partials/currentSculptureList.html" %}
+<p>hello</p>
+
+</div>

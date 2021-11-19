@@ -1,0 +1,39 @@
+<nav x-data="{
+    'menuOpen': false
+}" class="sticky z-50 top-0 h-12 w-full bg-black">
+    <div class="container flex h-full justify-between">
+        <div class="h-full flex flex-col justify-center">
+            <img class="h-8 w-8" src="/static/img/logo.png" />
+        </div>
+        <div class="h-full flex flex-col justify-center">
+            <div class="flex flex-row navicons">
+            <style>
+                .navicons * {fill:white}
+            </style>
+                <div class="text-white pl-4 opacity-80 hover:opacity-100">
+                    <button class="h-4 w-4">
+                        <svg preserveAspectRatio="xMidYMid meet" stroke="0.5" height="1rem" width="1rem" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 6v-2c0-2.209-1.791-4-4-4s-4 1.791-4 4v2h-5v18h18v-18h-5zm-7-2c0-1.654 1.346-3 3-3s3 1.346 3 3v2h-6v-2zm10 18h-14v-14h3v1.5c0 .276.224.5.5.5s.5-.224.5-.5v-1.5h6v1.5c0 .276.224.5.5.5s.5-.224.5-.5v-1.5h3v14z"/></svg>
+                    </button>
+                </div>
+                <div 
+                    @click="menuOpen = true"
+                    x-show="!menuOpen"
+                    class="text-white pl-4  opacity-80 hover:opacity-100">
+                    <button class="h-4 w-4">
+                        <svg preserveAspectRatio="xMidYMid meet" height="1rem" width="1rem" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill-rule="evenodd" clip-rule="evenodd"><path d="M24 18v1h-24v-1h24zm0-6v1h-24v-1h24zm0-6v1h-24v-1h24z" /><path d="M24 19h-24v-1h24v1zm0-6h-24v-1h24v1zm0-6h-24v-1h24v1z"/></svg>
+                    </button>
+                </div>
+                <div 
+                    @click="menuOpen = false"
+                    x-show="menuOpen" class="text-white pl-4  opacity-80 hover:opacity-100">
+                    <button class="h-4 w-4">
+                        <svg preserveAspectRatio="xMidYMid meet" height="1rem" width="1rem" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 11.293l10.293-10.293.707.707-10.293 10.293 10.293 10.293-.707.707-10.293-10.293-10.293 10.293-.707-.707 10.293-10.293-10.293-10.293.707-.707 10.293 10.293z"/></svg>
+                    </button>
+                </div>
+
+
+                
+            </div>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,42 @@
+{
+  "name": "parables-redesign",
+  "version": "1.0.0",
+  "description": "Parables In Wood Website",
+  "main": "_site",
+  "scripts": {
+    "dev": "rm -rf _site && mkdir _site && mkdir _site/static && mkdir _site/static/css && postcss src/static/css/tailwind.css > _site/static/css/style.css && eleventy --serve --quiet",
+    "build": "rm -rf _site && eleventy && NODE_ENV=production postcss src/static/css/tailwind.css > _site/static/css/style.css",
+    "start": "npm-run-all --parallel css eleventy browsersync",
+    "eleventy": "eleventy --watch",
+    "debug": "set DEBUG=* & eleventy",
+    "css": "postcss src/static/css/tailwind.css --o _site/static/css/style.css --watch",
+    "production": "cross-env NODE_ENV=production eleventy && cross-env NODE_ENV=production postcss src/static/css/tailwind.css --o _site/static/css/style.css",
+    "browsersync": "browser-sync start --server '_site' --files '_site' --port 8080 --no-notify --no-open"
+  },
+  "author": "Kevin Montgomery",
+  "license": "ISC",
+  "dependencies": {
+    "@11ty/eleventy": "^1.0.0-beta.4",
+    "@tailwindcss/aspect-ratio": "^0.3.0",
+    "html-minifier": "^4.0.0",
+    "postcss": "^8.3.11",
+    "postcss-cli": "^9.0.2"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
+    "@sherby/eleventy-plugin-files-minifier": "^1.1.1",
+    "@tailwindcss/typography": "^0.3.1",
+    "alpinejs": "^3.5.1",
+    "browser-sync": "^2.26.14",
+    "cross-env": "^7.0.2",
+    "cssnano": "^4.1.10",
+    "html-minifier": "^4.0.0",
+    "js-yaml": "^3.14.0",
+    "luxon": "^1.25.0",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^8.3.1",
+    "prismjs": "^1.21.0",
+    "tailwindcss": "^2.0.2"
+  }
+}

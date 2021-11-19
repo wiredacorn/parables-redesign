@@ -1,0 +1,17 @@
+items:
+  - text: Home
+    url: /
+  - text: USAFA
+    url: /usafa/
+  - text: Galleries
+    url: /galleries/
+  - text: Works For Sale
+    url: /works-for-sale/
+  - text: Works In Progress
+    url: /works-in-progress/
+  - text: Classes
+    url: /classes/
+  - text: Newsletter
+    url: /newsletter/
+  - text: About Chris
+    url: /about-chris/
